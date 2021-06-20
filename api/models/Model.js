@@ -5,7 +5,7 @@ Products.set(productId.toString(), {
     ProductName: "Batterie",
     ProductPrice: 50,
     ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Das ist die BESTE batterie YOU CAN GET",
+    ProductDescription: "Description: 12V, USB3",
     ProductID: productId,
     ProductStockQuantity: 100
 });
@@ -14,7 +14,7 @@ Products.set(productId.toString(), {
     ProductName: "Batterie2",
     ProductPrice: 50,
     ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Das ist die BESTE batterie YOU CAN GET",
+    ProductDescription: "Description: 12V, USB3",
     ProductID: productId,
     ProductStockQuantity: 100
 });
@@ -23,7 +23,7 @@ Products.set(productId.toString(), {
     ProductName: "Batterie3",
     ProductPrice: 50,
     ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Das ist die BESTE batterie YOU CAN GET",
+    ProductDescription: "Description: 12V, USB3",
     ProductID: productId,
     ProductStockQuantity: 100
 });
@@ -32,7 +32,7 @@ Products.set(productId.toString(), {
     ProductName: "Batterie4",
     ProductPrice: 50,
     ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Das ist die BESTE batterie YOU CAN GET",
+    ProductDescription: "Description: 12V, USB3",
     ProductID: productId,
     ProductStockQuantity: 100
 });
@@ -41,7 +41,7 @@ Products.set(productId.toString(), {
     ProductName: "Batterie5",
     ProductPrice: 50,
     ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Das ist die BESTE batterie YOU CAN GET",
+    ProductDescription: "Description: 12V, USB3",
     ProductID: productId,
     ProductStockQuantity: 100
 });
@@ -50,7 +50,7 @@ Products.set(productId.toString(), {
     ProductName: "Batterie6",
     ProductPrice: 50,
     ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Das ist die BESTE batterie YOU CAN GET",
+    ProductDescription: "Description: 12V, USB3",
     ProductID: productId,
     ProductStockQuantity: 100
 });
