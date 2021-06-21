@@ -2,55 +2,55 @@ const Products = new Map();
 let productId = 1;
 
 Products.set(productId.toString(), {
-    ProductName: "Batterie",
-    ProductPrice: 50,
+    ProductName: "Bosch",
+    ProductPrice: 25,
     ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Description: 12V, USB3",
+    ProductDescription: "Description: 12V, 45Ah",
     ProductID: productId,
     ProductStockQuantity: 100
 });
 productId++;
 Products.set(productId.toString(), {
-    ProductName: "Batterie2",
-    ProductPrice: 50,
-    ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Description: 12V, USB3",
+    ProductName: "Talamex",
+    ProductPrice: 87,
+    ProductCover: "../images/batterie2.jpg",
+    ProductDescription: "Description: 12V, 10A Allround-Ladegerät",
     ProductID: productId,
     ProductStockQuantity: 100
 });
 productId++;
 Products.set(productId.toString(), {
-    ProductName: "Batterie3",
-    ProductPrice: 50,
-    ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Description: 12V, USB3",
+    ProductName: "ACCUPOWER",
+    ProductPrice: 57,
+    ProductCover: "../images/batterie3.jpg",
+    ProductDescription: "Description: AAA bis Micro, 9V, USB3",
     ProductID: productId,
     ProductStockQuantity: 100
 });
 productId++;
 Products.set(productId.toString(), {
-    ProductName: "Batterie4",
-    ProductPrice: 50,
-    ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Description: 12V, USB3",
+    ProductName: "Absaar",
+    ProductPrice: 13,
+    ProductCover: "../images/batterie4.jpg",
+    ProductDescription: "Description: 12V, 22A, 30Ah - 225Ah",
     ProductID: productId,
     ProductStockQuantity: 100
 });
 productId++;
 Products.set(productId.toString(), {
-    ProductName: "Batterie5",
-    ProductPrice: 50,
-    ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Description: 12V, USB3",
+    ProductName: "Ryobi",
+    ProductPrice: 75,
+    ProductCover: "../images/batterie5.jpg",
+    ProductDescription: "Description: 7,2V - 20V, Li-ion",
     ProductID: productId,
     ProductStockQuantity: 100
 });
 productId++;
 Products.set(productId.toString(), {
-    ProductName: "Batterie6",
-    ProductPrice: 50,
-    ProductCover: "../images/batterie1.jpg",
-    ProductDescription: "Description: 12V, USB3",
+    ProductName: "RA 431 B",
+    ProductPrice: 5,
+    ProductCover: "../images/batterie6.jpg",
+    ProductDescription: "Description: 24V, USB3",
     ProductID: productId,
     ProductStockQuantity: 100
 });
