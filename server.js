@@ -2,6 +2,7 @@ if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
 
+
 //holt sich die express lib
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -23,13 +24,14 @@ initializePassport(passport, email =>
 )
 
 //wird gebraucht fuer die verbindung von der webseite zum server
-var cors = require('cors')
+let cors = require('cors')
 app.use(cors()) // Use this after the variable declaration
 
 
 const users = []
 
 app.set('view-engine', 'ejs')
+app.use('/css',express.static(__dirname + '/css'));
 app.use(express.urlencoded({extended: false}))
 app.use(flash())
 app.use(session({
@@ -46,7 +48,7 @@ app.get('/', (req, res) =>{
 })
 
 app.get('/login', (req,res) =>{
-    res.render('login.ejs')
+    res.render('login.ejs',)
 })
 
 app.post('/login', passport.authenticate('local', {

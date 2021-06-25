@@ -75,8 +75,5 @@ class Model{
     }
     //test
 
-
-
-
 }
 module.exports = Model;
