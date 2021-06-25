@@ -1,66 +1,8 @@
 
-/*body{
-    margin: 3em;
-    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
-}*/
-
-/* *, *:before, *:after {
-    box-sizing: border-box;
-}*/
-
-
-/*temporäre klasse, bis background gelöst ist - entfernen, wenn nicht mehr gebraucht*/
-
 main>p {
     text-align: center;
 }
 
-.signupinform {
-    padding: 40px;
-    max-width: 600px;
-    margin: 4% 0 0 37%;
-}
-/*
-.signupin_tab-group {
-    list-style: none;
-    margin: 0 0 40px 0;
-    padding: 0;
-}
-
-.signupin_tab-group::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-.signupin_tab-group ul li a {
-    display: block;
-    padding: 15px;
-    width: 50%;
-    background: red;
-    text-align: center;
-    float: left;
-    cursor: pointer;
-
-    text-decoration:none;
-    color: lightgray;
-    font-size:20px;
-    transition:.5s ease;
-}
-
-.signupin_tab-group ul li a :hover {
-    background: -moz-mac-accentdarkshadow;
-    color: white;
-}
-*/
-/*
-section.tab-content.hide {
-    display: none;
-}
-*/
-main>p {
-    text-align: center;
-}
 
 .signupinform {
     padding: 40px;
@@ -78,7 +20,6 @@ input, textarea {
     font-size: 22px;
     display: block;
     width: 100%;
-    height: 100%;
     padding: 5px 10px;
     background: none;
     border: 1px solid #a0b3b0;
@@ -89,6 +30,7 @@ input, textarea {
     position: relative;
     margin-bottom: 40px;
 }
+
 
 .submitbutton {
     background-color: teal;
@@ -105,8 +47,9 @@ input, textarea {
 
 #signIn{
     float: left;
-    width: 9%;
-    margin-top: 1%;
+    width: 8%;
+    margin-top: 0;
+    margin-left: 1%;
 }
 #signUp{
     float: left;
@@ -126,7 +69,18 @@ input, textarea {
 
     margin: 0;
 }
+@media screen and (max-width: 1240px){
+    .signupinform{
+        margin: 4% 0 0 20%;
+    }
 
+}
+@media screen and (max-width: 1060px){
+    .signupinform{
+        margin: 4% 0 0 15%;
+    }
+
+}
 @media screen and (max-width: 1024px) {
     .signupinform {
         margin-top: 8%;
@@ -185,7 +139,7 @@ input, textarea {
         padding: 0;
     }
     #h1{
-    padding: 2%;
+        padding: 2%;
     }
 
 }
