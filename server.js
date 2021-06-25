@@ -2,7 +2,6 @@ if(process.env.NODE_ENV !== 'production'){
     require('dotenv').config()
 }
 
-
 //holt sich die express lib
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -34,7 +33,7 @@ app.set('view-engine', 'ejs')
 app.use('/css',express.static(__dirname + '/css'));
 app.use('/images',express.static(__dirname + '/images'));
 app.use('/js',express.static(__dirname + '/js'));
-
+app.use('/views',express.static(__dirname + '/views'));
 
 app.use(express.urlencoded({extended: false}))
 app.use(flash())

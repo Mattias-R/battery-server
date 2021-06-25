@@ -1,18 +1,68 @@
 <script defer src="../js/test.js"></script>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../css/signUpIn.css" type="text/css">
+  <link rel="stylesheet" href="../css/NavFood.css" type="text/css">
+  <link rel="stylesheet" href="../css/fonts.css" type="text/css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/lightmode.css" type="text/css">
+  <link rel="stylesheet" href="../css/darkmode.css" type="text/css">
+  <script defer src="../JS/darkmode.js"></script>
+  <!-- <script src="../JS/signUpIn.js"></script>-->
+</head>
+<body id="body" class="body-lightmode">
+<header id="header" class="navFooter-lightmode">
+  <!--
+  <ul>
+    <li><a href="html/main.html"><img id = "mainIcon" alt="battery mascot" src="../images/Mainpicture.PNG"></a></li>
+    <li><a href="/html/shoppingcart.html"><img id="shoppingcartIcon" alt="shoppingcart icon" src="../images/Shoppingcart.PNG"></a></li>
+    <li><a href="/html/shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop.PNG" ></a></li>
+  </ul>
+  -->
+</header>
 
-<h1>Login</h1>
-<% if (messages.error) { %>
-  <%= messages.error %>
-<% } %>
-<form action="/login" method="POST">
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required>
-  </div>
-  <button type="submit">Login</button>
-</form>
-<a href="/register">Register</a>
+<main id="main" class="main-lightmode">
+
+  <section class="signupclasstemp">
+
+    <p id="easterEgg"><a href="https://www.youtube.com/watch?v=G1IbRujko-A" target="_blank">Just click me</a></p>
+    <!-- klasse temporär, weil background für body nicht funktioniert hat. kann entfernt werden-->
+    <ul class="signInLink">
+      <li><a href="/register"><img id="signUp" alt="SignIn Icon " src="../images/SignUp.PNG"></a></li>
+    </ul>
+    <!-- links oder buttons? aktuell: buttons mit javascript dom -->
+    <h1 id="h1" class="h1-lightmode">Login</h1>
+    <% if (messages.error) { %>
+      <%= messages.error %>
+    <% } %>
+
+
+
+    <section class="signupinform" id="signinform" ><!--TODO: style in css -->
+      <form action="/login" method="POST">
+        <section class="field">
+          <label for="email"></label>
+          <input type="text" name="email" id="email" placeholder="your@email.com" required>
+        </section>
+        <section class="field">
+          <label for="password"></label>
+          <input type="text" name="password" id="password" placeholder="password" required>
+        </section>
+        <label for="login_submit"></label>
+        <button type="submit" class="submitbutton" id="login_submit">Login</button>
+      </form>
+    </section>
+  </section>
+</main>
+
+<footer id="footer" class="navFooter-lightmode">
+  <p>Impressum: Da steht was <br>
+    Kontakt: Adresse <br>
+    <!--<a href="feedback.html">Feedback</a></p>-->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">Toggle</button>
+</footer>
+</body>
+</html>

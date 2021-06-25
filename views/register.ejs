@@ -1,17 +1,77 @@
-<h1>Register</h1>
-<form action="/register" method="POST">
-  <div>
-    <label for="name">Name</label>
-    <input type="text" id="name" name="name" required>
-  </div>
-  <div>
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" required>
-  </div>
-  <div>
-    <label for="password">Password</label>
-    <input type="password" id="password" name="password" required>
-  </div>
-  <button type="submit">Register</button>
-</form>
-<a href="/login">Login</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sign Up</title>
+  <link rel="stylesheet" href="../css/signUpIn.css">
+  <link rel="stylesheet" href="../css/NavFood.css">
+  <link rel="stylesheet" href="../css/fonts.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/lightmode.css">
+  <link rel="stylesheet" href="../css/darkmode.css">
+  <script defer src="../js/darkmode.js"></script>
+  <!-- <script src="../JS/signUpIn.js"></script>-->
+</head>
+<body id="body" class="body-lightmode">
+
+<header id="header" class="navFooter-lightmode">
+  <!--
+  <ul>
+    <li><a href="html/main.html"><img id = "mainIcon" alt="battery mascot" src="../images/Mainpicture.PNG"></a></li>
+    <li><a href="html/shoppingcart.html"><img id="shoppingcartIcon" alt="shoppingcart icon" src="../images/Shoppingcart.PNG"></a></li>
+    <li><a href="html/shop.html"><img id="shopIcon" alt="Shop Icon" src="../images/Shop.PNG" ></a></li>
+  </ul>
+-->
+</header>
+
+<main id="main" class="main-lightmode">
+  <section class="signupclasstemp">
+    <!-- klasse temporär, weil background für body nicht funktioniert hat. kann entfernt werden-->
+
+    <!-- links oder buttons? aktuell: buttons mit javascript dom -->
+    <ul class="signInLink">
+      <li><a href="/login"><img id = "signIn" alt="Sign In Icon" src="../images/SignIn.PNG"></a></li>
+    </ul>
+    <h1 id="h1" class="h1-lightmode">Create your account</h1>
+
+
+    <section class="signupinform" id="signupform">
+      <form action="/register" method="POST">
+
+        <section class="field">
+          <label for="name"></label>
+          <input type="text" name="name" id="name" placeholder="Name" required>
+        </section>
+        <!--
+        <section class="field">
+          <label for="last_name"></label>
+          <input type="text" name="last_name" id="last_name" placeholder="Last name" required>
+        </section>
+        -->
+
+        <section class="field">
+          <label for="email"></label>
+          <input type="email" name="email" id="email" placeholder="user@example.com" required>
+        </section>
+
+        <section class="field">
+          <label for="password"></label>
+          <input type="text" name="password" id="password" placeholder="password" required>
+        </section>
+
+        <label for="register_submit"></label>
+        <button type="submit" class="submitbutton" id="register_submit" >Register</button>
+
+      </form>
+    </section>
+  </section>
+</main>
+
+<footer id="footer" class="navFooter-lightmode">
+  <p>Impressum: Da steht was <br>
+    Kontakt: Adresse <br>
+    <!--<a href="feedback.html">Feedback</a></p>-->
+    <button id="dark-mode-toggle" class="dark-mode-toggle">Dark</button>
+</footer>
+</body>
+</html>
