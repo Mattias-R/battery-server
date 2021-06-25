@@ -51,7 +51,7 @@ app.get('/', (req, res) =>{
     console.log("test");
 
         try{
-            res.render('index.ejs', {name: req.user.name})
+            res.render('checkout.ejs', {name: req.user.name})
         }catch{
             res.render('login.ejs')
         }
@@ -74,6 +74,9 @@ app.post('/login', (req,res) =>{
 app.get('/register', (req,res) =>{
     res.render('register.ejs')
 })
+
+app.get('/checkout', (req, res) =>
+res.render('checkout.ejs', {name: req.user.name}))
 
 app.post('/register', async (req,res) => {
     try{
