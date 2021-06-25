@@ -48,11 +48,18 @@ app.use(passport.session())
 
 
 app.get('/', (req, res) =>{
-    res.render('index.ejs', {name: req.user.name})
+    console.log(req);
+    console.log("test");
+
+        try{
+            res.render('index.ejs', {name: req.user.name})
+        }catch{
+            res.render('login.ejs')
+        }
 })
 
 app.get('/login', (req,res) =>{
-    res.render('login.ejs',)
+    res.render('login.ejs')
 })
 
 app.post('/login', passport.authenticate('local', {
