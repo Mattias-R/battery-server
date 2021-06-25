@@ -47,10 +47,13 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-app.get('/', (req, res) =>{
-    console.log(req);
-    console.log("test");
+app.get('/',checkAuthenticated, (req, res) =>{
+    res.render('index.ejs', {name: req.user.name})
+})
 
+
+/*
+app.get('/', (req, res) =>{
         try{
             res.render('index.ejs', {name: req.user.name})
         }catch{
@@ -58,27 +61,29 @@ app.get('/', (req, res) =>{
         }
 })
 
-app.get('/login', (req,res) =>{
+*/
+
+app.get('/login',checkNotAuthenticated, (req,res) =>{
     res.render('login.ejs')
 })
 
-app.post('/login', passport.authenticate('local', {
+app.post('/login',checkNotAuthenticated, passport.authenticate('local', {
     successRedirect: '/',
     failureRedirect: '/login',
     failureFlash: true
 }))
 
-app.post('/login', (req,res) =>{
+app.post('/login', checkNotAuthenticated, (req,res) =>{
     res.render('login.ejs')
 })
 
-app.get('/register', (req,res) =>{
+app.get('/register', checkNotAuthenticated, (req, res) => {
     res.render('register.ejs')
 })
 
-app.post('/register', async (req,res) => {
-    try{
-        const hashedPassword = await bcrypt.hash(req.body.password,10)
+app.post('/register', checkNotAuthenticated, async (req, res) => {
+    try {
+        const hashedPassword = await bcrypt.hash(req.body.password, 10)
         users.push({
             id: Date.now().toString(),
             name: req.body.name,
@@ -86,16 +91,30 @@ app.post('/register', async (req,res) => {
             password: hashedPassword
         })
         res.redirect('/login')
-    }catch(ex){
+    } catch {
         res.redirect('/register')
-        console.log(ex)
     }
-    console.log(users)
 })
 
 //body parser
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
+
+
+function checkAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return next()
+    }
+    res.redirect('/login')
+}
+
+function checkNotAuthenticated(req, res, next) {
+    if (req.isAuthenticated()) {
+        return res.redirect('/')
+    }
+    next()
+}
+
 
 //Starten den server an port 1337.
 app.listen(port, (error) =>{
