@@ -32,6 +32,10 @@ const users = []
 
 app.set('view-engine', 'ejs')
 app.use('/css',express.static(__dirname + '/css'));
+app.use('/images',express.static(__dirname + '/images'));
+app.use('/js',express.static(__dirname + '/js'));
+
+
 app.use(express.urlencoded({extended: false}))
 app.use(flash())
 app.use(session({
