@@ -1,0 +1,130 @@
+
+body{
+    box-shadow: 0 0 8px 10px rgba(210,255,250,0.9);
+}
+main{
+    background-color: #d7f1f8 ;/*rgb(210,255,250);*/
+    border-left: solid 1px black;
+    border-right: solid 1px black;
+    width: 100%;
+
+}
+/*article{
+    background-color: rgb(89,89,89);
+}#8ec975
+rgb(80,240,190)
+article:nth-of-type(2n){
+    background-color: rgb(210,255,250);
+    height: 80vh;
+}
+*/
+h1{
+    font-family: Gadugi;
+    color:  #014753;
+    /* Muss weg wegen darkmode :)
+    background-color:#d7f1f8; */
+    /*rgb(210,255,250);*/
+
+    font-size: 4.5em;
+}
+
+h2{
+    font-family: Gadugi;
+    color: #01839d;
+    font-size: xx-large;
+}
+
+p{
+    font-family: Arial;
+    color: #002a29;
+    font-size: large;
+}
+/*
+a {
+    decoration: none;
+}
+
+ */
+td{
+    font-family: Arial;
+}
+th{
+    font-family: Arial;
+    font-size: x-large;
+}
+#cartTotal{
+    background-color: #aacfe2;
+}
+#weatherCondition{
+    font-size: xx-large;
+}
+
+#total {
+    font-size: x-large;
+}
+#temp{
+    font-size: 3em;
+}
+
+#cityName{
+    font-size: xx-large;
+}
+
+#orderButton {
+font-size: 24px;
+}
+
+#easterEgg a:link, a:visited{
+
+    font-style: italic;
+    text-decoration: none;
+    color: rgb(210,255,250);
+    padding-left: 47%;
+
+}
+#easterEgg a:hover {
+    font-style: italic;
+    color: rgb(255,120,62);
+}
+
+
+@media screen and (max-width: 768px) {
+#cityName{
+    font-size: x-large;
+}
+#temp{
+    font-size: xx-large;
+}
+#weatherCondition{
+    font-size: large;}
+}
+
+
+@media screen and (max-width: 540px) {
+#weatherCondition{
+    font-size: large;
+}
+    #temp{
+        font-size: x-large;
+    }
+
+    #weatherCondition{
+        font-size: large;
+    }
+    #cityName {
+        font-size: large;
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    #weatherCondition {
+        font-size: large;
+    }
+}
+@media screen and (max-width: 320px) {
+
+    #weatherCondition {
+        font-size: large;
+    }
+}

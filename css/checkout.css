@@ -1,0 +1,46 @@
+article{
+    height: 75vh;
+    width: 100%;
+}
+h1{
+    margin:0;
+    padding: 0.5em;
+    text-align: center;
+}
+h2{
+    margin: 0;
+    padding: 0.3em;
+    text-align: center;
+}
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+@media screen and (max-width: 1024px) {
+    .center{
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    article>h1{
+        font-size: 3em;
+    }
+    article>h2{
+        font-size: 2em;
+    }
+    article{
+        height: 70vh;
+    }
+}
+@media screen and (max-width: 320px) {
+    article>h1{
+        padding: 0.3em;
+    }
+    article{
+        height: 90vh;
+    }
+}

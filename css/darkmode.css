@@ -1,0 +1,20 @@
+.navFooter-darkmode{
+    background-color: #e2ae6c !important;
+}
+.main-darkmode{
+    background-color: #a37c82  !important;
+}
+.body-darkmode{
+    box-shadow: 0 0 8px 10px #22161c;
+    background-color: #6e304b  !important;
+}
+.items-darkmode{
+    background-color: green  !important;
+}
+
+.h1-darkmode{
+    color: #22161c;
+}
+.h2-darkmode{
+    color: #f2f1ef;
+}

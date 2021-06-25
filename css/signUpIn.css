@@ -1,0 +1,221 @@
+
+/*body{
+    margin: 3em;
+    box-shadow: 0px 0px 5px 3px rgba(0,0,0,0.75);
+}*/
+
+/* *, *:before, *:after {
+    box-sizing: border-box;
+}*/
+
+
+/*temporäre klasse, bis background gelöst ist - entfernen, wenn nicht mehr gebraucht*/
+
+main>p {
+    text-align: center;
+}
+
+.signupinform {
+    padding: 40px;
+    max-width: 600px;
+    margin: 4% 0 0 37%;
+}
+/*
+.signupin_tab-group {
+    list-style: none;
+    margin: 0 0 40px 0;
+    padding: 0;
+}
+
+.signupin_tab-group::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.signupin_tab-group ul li a {
+    display: block;
+    padding: 15px;
+    width: 50%;
+    background: red;
+    text-align: center;
+    float: left;
+    cursor: pointer;
+
+    text-decoration:none;
+    color: lightgray;
+    font-size:20px;
+    transition:.5s ease;
+}
+
+.signupin_tab-group ul li a :hover {
+    background: -moz-mac-accentdarkshadow;
+    color: white;
+}
+*/
+/*
+section.tab-content.hide {
+    display: none;
+}
+*/
+main>p {
+    text-align: center;
+}
+
+.signupinform {
+    padding: 40px;
+    max-width: 600px;
+    margin: 4% 0 0 37%;
+}
+
+
+textarea {
+    border: 2px solid #a0b3b0;
+    resize: vertical;
+}
+
+input, textarea {
+    font-size: 22px;
+    display: block;
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: none;
+    border: 1px solid #a0b3b0;
+    color: white;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.submitbutton {
+    background-color: teal;
+    opacity: 0.9;
+    border: 0;
+    outline: none;
+    border-radius: 0;
+    padding: 15px 25%;
+    margin-left: 2%;
+    font-size: 2em;
+    transition: all .5s ease;
+}
+
+
+#signIn{
+    float: left;
+    width: 9%;
+    margin-top: 1%;
+}
+#signUp{
+    float: left;
+    width: 8%;
+    margin-top: 0;
+    margin-left: 1%;
+}
+#h1{
+    margin-left: 0;
+    margin-bottom: 0;
+    padding-top: 1%;
+    padding-right: 10%;
+    margin-top: 0;
+    text-align: center;
+}
+#easterEgg{
+
+    margin: 0;
+}
+
+@media screen and (max-width: 1024px) {
+    .signupinform {
+        margin-top: 8%;
+        margin-left: 11%;
+    }
+    #easterEgg{
+        display: none;
+    }
+    audio{
+        display: none;
+    }
+    #h1{
+        padding-right: 11%;
+        margin-bottom: 0;
+    }
+    #signIn{
+        margin-right: 2%;
+        margin-top: 0;
+        width: 12%;
+    }
+    #signUp{
+        margin-top: 0;
+        margin-right: 2%;
+        width: 10.5%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .signupinform {
+        margin-left: 6%;
+        margin-right: 8%;
+    }
+    #h1{
+        margin-bottom: 0;
+    }
+    #signUp{
+        width: 13%;
+        margin: 0;
+        padding: 0 5% 5% 0;
+    }
+    #signIn{
+        margin: 0;
+        width: 15%;
+        padding: 0 5% 5% 0;
+    }
+
+}
+@media screen and (max-width: 540px) {
+    .submitbutton{
+        padding-left: 4%;
+    }
+    #signIn{
+        padding: 0 0 0 0;
+        margin: 0;
+    }
+    #signUp{
+        padding: 0;
+    }
+    #h1{
+    padding: 2%;
+    }
+
+}
+@media screen and (max-width: 414px) {
+    .submitbutton{
+        padding-left: 7%;
+        font-size: 1.2em;
+    }
+    .signupinform{
+        padding-top: 2%;
+    }
+    #signIn{
+        width: 25%;
+    }
+    #h1{
+        padding-top: 28%;
+        font-size: 3em;
+    }
+    #signUp{
+        width: 23%;
+        padding-left: 2.5%;
+    }
+
+
+}
+@media screen and (max-width: 320px) {
+    #signUp{
+        padding-left: 0;
+    }
+    #h1{
+        padding: 0;
+    }
+}
