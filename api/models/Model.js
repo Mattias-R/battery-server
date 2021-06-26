@@ -66,7 +66,7 @@ class Model{
 
     static createProduct(product) {
         productId++;
-        Products.set(productId,product);
+        Products.set(productId.toString(),product);
     }
 
     static findProductsById(id){

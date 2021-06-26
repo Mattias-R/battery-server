@@ -115,6 +115,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
+//continue to the next matching route handler
 function checkAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
         return next()
