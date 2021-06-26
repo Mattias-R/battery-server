@@ -15,6 +15,14 @@ class Controller{
             res.status(404).send('Product not found');
         }
     }
+
+
+    static createProduct (req, res) {
+        let newProduct = req.body;
+        Model.createProduct(newProduct);
+        res.send("Product created!");
+    }
+
     static updateProductById(req, res){
         let newProduct = req.body;
         let {id} = req.params;

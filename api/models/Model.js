@@ -63,6 +63,12 @@ class Model{
         }
         return productArray;
     }
+
+    static createProduct(product) {
+        productId++;
+        Products.set(productId,product);
+    }
+
     static findProductsById(id){
         let product = Products.get(id);
         return product;
