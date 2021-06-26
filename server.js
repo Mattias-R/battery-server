@@ -48,10 +48,12 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())
 
-
+/*
 app.get('/',checkAuthenticated, (req, res) =>{
     res.render('index.ejs', {name: req.user.name})
 })
+
+ */
 
 app.get('/checkout',checkAuthenticated, (req, res) =>
     res.render('checkout.ejs', {name: req.user.name})
