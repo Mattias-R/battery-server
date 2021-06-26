@@ -12,6 +12,7 @@ const app = express();
 //setzt port als port 1337 fest
 const port = process.env.PORT || 1337;
 const bcrypt = require('bcrypt')
+const methodOverride = require('method-override')
 
 const flash = require('express-flash')
 const session = require('express-session')
@@ -34,6 +35,7 @@ app.set('view-engine', 'ejs')
 app.use('/css',express.static(__dirname + '/css'));
 app.use('/images',express.static(__dirname + '/images'));
 app.use('/js',express.static(__dirname + '/js'));
+app.use(methodOverride('_method'))
 
 
 app.use(express.urlencoded({extended: false}))
@@ -50,6 +52,15 @@ app.use(passport.session())
 app.get('/',checkAuthenticated, (req, res) =>{
     res.render('index.ejs', {name: req.user.name})
 })
+
+app.get('/checkout',checkAuthenticated, (req, res) =>
+    res.render('checkout.ejs', {name: req.user.name})
+)
+app.delete('/logout', (req, res) => {
+    req.logOut()
+    res.redirect('/login')
+})
+
 
 
 /*
@@ -68,7 +79,7 @@ app.get('/login',checkNotAuthenticated, (req,res) =>{
 })
 
 app.post('/login',checkNotAuthenticated, passport.authenticate('local', {
-    successRedirect: '/',
+    successRedirect: 'checkout',
     failureRedirect: '/login',
     failureFlash: true
 }))
@@ -110,7 +121,7 @@ function checkAuthenticated(req, res, next) {
 
 function checkNotAuthenticated(req, res, next) {
     if (req.isAuthenticated()) {
-        return res.redirect('/')
+        return res.redirect('/checkout')
     }
     next()
 }
