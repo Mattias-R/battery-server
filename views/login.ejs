@@ -30,18 +30,18 @@
     <p id="easterEgg"><a href="https://www.youtube.com/watch?v=G1IbRujko-A" target="_blank">Just click me</a></p>
     <!-- klasse temporär, weil background für body nicht funktioniert hat. kann entfernt werden-->
     <ul class="signInLink">
-      <li><a href="/register"><img id="signUp" alt="SignIn Icon " src="../images/SignUp.PNG"></a></li>
+      <li><a href="/register"><img id="signUp" alt="SignIn Icon " src="../images/SignUp.PNG"></a></li><!--refers to register by clicking img-->
     </ul>
     <!-- links oder buttons? aktuell: buttons mit javascript dom -->
     <h1 id="h1" class="h1-lightmode">Login</h1>
-    <% if (messages.error) { %>
+    <% if (messages.error) { %><!-- display massage-->
       <%= messages.error %>
     <% } %>
 
 
 
     <section class="signupinform" id="signinform" ><!--TODO: style in css -->
-      <form action="/login" method="POST">
+      <form action="/login" method="POST"><!-- post to a route with the name /login inside server-->
         <section class="field">
           <label for="email"></label>
           <input type="text" name="email" id="email" placeholder="your@email.com" required>
