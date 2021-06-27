@@ -11,7 +11,7 @@
 
 /*temporäre klasse, bis background gelöst ist - entfernen, wenn nicht mehr gebraucht*/
 
-m/*ain>p {
+/*main>p {
     text-align: center;
 }
 
@@ -58,6 +58,13 @@ section.tab-content.hide {
     display: none;
 }
 */
+
+
+
+/*textarea {
+    border: 2px solid #a0b3b0;
+    resize: vertical;
+}*/
 main>p {
     text-align: center;
 }
@@ -66,12 +73,6 @@ main>p {
     padding: 40px;
     max-width: 600px;
     margin: 4% 0 0 37%;
-}
-
-
-textarea {
-    border: 2px solid #a0b3b0;
-    resize: vertical;
 }
 
 input, textarea {
@@ -133,9 +134,6 @@ input, textarea {
         margin-left: 11%;
     }
     #easterEgg{
-        display: none;
-    }
-    audio{
         display: none;
     }
     #h1{
