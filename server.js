@@ -53,12 +53,6 @@ app.use(session({
 app.use(passport.initialize())
 app.use(passport.session())//store vars the entire session work with line 48
 
-/*
-app.get('/',checkAuthenticated, (req, res) =>{
-    res.render('index.ejs', {name: req.user.name})
-})
-
- */
 
 app.get('/checkout',checkAuthenticated, (req, res) =>//
     res.render('checkout.ejs', {name: req.user.name})
@@ -68,18 +62,6 @@ app.delete('/logout', (req, res) => {//delete req saver
     res.redirect('/login')
 })
 
-
-
-/*
-app.get('/', (req, res) =>{
-        try{
-            res.render('index.ejs', {name: req.user.name})
-        }catch{
-            res.render('login.ejs')
-        }
-})
-
-*/
 
 app.get('/login',checkNotAuthenticated, (req,res) =>{//render to login //not allow users to go to login if logged in
     res.render('login.ejs')// no extra info needed
@@ -91,9 +73,6 @@ app.post('/login',checkNotAuthenticated, passport.authenticate('local', {// loca
     failureFlash: true//show message to user
 }))
 
-app.post('/login', checkNotAuthenticated, (req,res) =>{//dont allow to login if authenticated
-    res.render('login.ejs')
-})
 
 app.get('/register', checkNotAuthenticated, (req, res) => {// same as login with register
     res.render('register.ejs')

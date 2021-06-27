@@ -16,7 +16,6 @@ class Controller{
         }
     }
 
-
     static createProduct (req, res) {
         let newProduct = req.body;
         Model.createProduct(newProduct);
